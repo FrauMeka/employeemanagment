@@ -1,0 +1,35 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.employeemanagment.HelloController" spacing="10" alignment="TOP_CENTER" style="-fx-background-color: #e3f2fd;" prefWidth="1000" prefHeight="700">
+
+    <!-- Title -->
+    <Label text="Employee Management System" style="-fx-font-size: 28; -fx-font-family: 'Comic Sans MS'; -fx-text-fill: #1e88e5;" />
+
+    <!-- Input Section -->
+    <TextField fx:id="inputField" promptText="Enter Name, Type, Salary" style="-fx-background-color: #bbdefb; -fx-border-color: #1e88e5; -fx-border-radius: 5;" />
+
+    <!-- Table Section -->
+    <TableView fx:id="tableView" style="-fx-border-color: #1e88e5; -fx-background-color: #e3f2fd; -fx-border-radius: 5;">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" />
+            <TableColumn fx:id="typeColumn" text="Type" />
+            <TableColumn fx:id="salaryColumn" text="Salary" />
+        </columns>
+    </TableView>
+
+    <!-- Buttons Section -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Add Employee" fx:id="addButton" onAction="#handleAddEmployee" style="-fx-background-color: #64b5f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: #1976d2;" />
+        <Button text="Remove Selected" fx:id="removeButton" style="-fx-background-color: #64b5f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: #1976d2;" />
+        <Button text="Calculate Salaries" fx:id="calculateButton" style="-fx-background-color: #64b5f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: #1976d2;" />
+    </HBox>
+
+</VBox>
